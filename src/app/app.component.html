@@ -15,15 +15,19 @@
   <h1 class="title">Menu</h1>
   <div class="buttons"> 
     <div *ngFor="let dataGato of dataGatos">
-    <button class="button is-responsive is-rounded" click = "ShowData(dataGato.titulo)" >{{dataGato.titulo}} </button>
+    <button class="button is-responsive is-rounded" (click) = "showData(dataGato.titulo)" >{{dataGato.titulo}} </button>
     </div>
   </div> 
+
+<div *ngIf = "visualizarMensaje">
+  <app-notificacion [mensaje] = "mensaje"></app-notificacion>
+</div>
 
 </section>
 <div class="columns">
   <div *ngFor="let dataGato of dataGatos">
     <div class="column" *ngIf="dataGato.renderizar">
-      <app-componente1 [dataGato]="dataGato"></app-componente1>
+      <app-componente1 (emmiter) = "something($event,dataGato.titulo)" [dataGato]="dataGato"></app-componente1>
     </div>
   </div>
 </div>

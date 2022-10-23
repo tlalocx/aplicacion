@@ -9,17 +9,16 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 export class Componente1Component implements OnInit {
   @Input() 
    dataGato: any;
-  @Output()
-   emmiter = new EventEmitter<any>();
-   mostrar!: Boolean;
+   
+  @Output() emmiter = new EventEmitter<boolean>();  
 
    constructor() { }
 
   ngOnInit(): void {
   }
   
-  emitSomething(value: string) {
-    this.emmiter.emit(value);
+  emitSomething() {
+    this.emmiter.emit(false);
   }
 
 }

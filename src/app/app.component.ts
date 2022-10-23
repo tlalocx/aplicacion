@@ -33,16 +33,24 @@ export class AppComponent {
   ];
 
   element!: boolean;
-  showData(x:String ) {
-    let array;
-    for (array of this.dataGatos){
-     for (const obj in array){
-      if(obj  === "titulo" && array[obj]=== x){
-        array.renderizar= false;
-        break;
+  showData(titulo:String) {
+    let array = this.dataGatos.map((x,y,z) =>{
+      if(x.titulo === titulo){
+       if(x.renderizar === false){
+        x.renderizar = true;
+      }else{
+        x.renderizar= false;
       }
-    }
-    }
-    return array;
+      }
+      return x;
+    });
   }
+  mensaje = "";
+  visualizarMensaje = false;
+  something(valor: boolean, titulo: String){
+    this.showData(titulo);
+    this.mensaje = "Se cerro la ventana de " + titulo;
+    this.visualizarMensaje = true;
+  }
+
 }
