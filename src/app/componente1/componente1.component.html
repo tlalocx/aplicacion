@@ -1,0 +1,16 @@
+<div class="card">
+  <button class="delete" (click)="emitSomething('ok')"></button>
+  <form class="box">
+    <div class="field">
+      <label class="label">Filtrar</label>
+      <div class="control">
+        <input class="input" type="Busqueda" placeholder="Escribe">
+      </div>
+      <button class="button is-info">Buscar</button>
+    </div>
+
+    <img src="{{dataGato.img}}" alt="Avatar">
+    <div class="container">
+      <h4><b>{{dataGato.titulo}}</b></h4>
+      <p>{{dataGato.descripcion}}</p>
+    </div>

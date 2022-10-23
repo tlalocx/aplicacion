@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "C:/Users/jesum/aplicacion/node_modules/bulma/css/bulma.css";
+
+img{
+    height: 400px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+   }
