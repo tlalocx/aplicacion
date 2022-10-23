@@ -13,7 +13,8 @@ import { NotificacionComponent } from './notificacion/notificacion.component';
     AppComponent,
     Componente1Component,
     Componente2Component,
-    Componente3Component
+    Componente3Component,
+    NotificacionComponent
   ],
   imports: [
     BrowserModule,
