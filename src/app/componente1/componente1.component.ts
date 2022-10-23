@@ -7,9 +7,13 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 })
 
 export class Componente1Component implements OnInit {
-  @Input() dataGato: any;
-  @Output() emmiter = new EventEmitter<any>();
-  constructor() { }
+  @Input() 
+   dataGato: any;
+  @Output()
+   emmiter = new EventEmitter<any>();
+   mostrar!: Boolean;
+
+   constructor() { }
 
   ngOnInit(): void {
   }
