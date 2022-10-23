@@ -11,7 +11,7 @@ export class AppComponent {
   dataGatos = [
     {
       img: 'assets/images/Bosque-de-noruega.png',
-      titulo: 'Bosque de ',
+      titulo: 'Bosque de Noruega',
       descripcion:
         'A los gatos bosque de Noruega les encanta la gente y se desarrollan mejor con compañía humana. A veces, pueden ser muy insistentes pidiendo atención. En otras ocasiones, puede que se muestren bastante independientes. Están acostumbrados a la vida al aire libre y muy bien adaptados al vagabundeo y a la caza; también se dice que son excelentes escaladores. Pueden ser compañeros muy gratificantes, por su naturaleza enormemente amistosa y juguetona. Es una raza de desarrollo lento y puede que no alcance la madurez hasta los cuatro años.',
     },

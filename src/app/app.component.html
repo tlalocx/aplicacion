@@ -10,6 +10,15 @@
     </p>
   </div>
 </section>
+<section class="section">
+  <h1 class="title">Menu</h1>
+  <div class="buttons">
+    <div *ngFor="let dataGato of dataGatos">
+    <button class="button is-responsive is-rounded" >{{dataGato.titulo}} </button>
+    </div>
+  </div>
+ 
+</section>
 
 <div class="columns">
   <div *ngFor="let dataGato of dataGatos">
