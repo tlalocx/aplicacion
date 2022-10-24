@@ -15,7 +15,7 @@ export class AppComponent {
       titulo: 'Bosque de Noruega',
       descripcion:
         'A los gatos bosque de Noruega les encanta la gente y se desarrollan mejor con compañía humana. A veces, pueden ser muy insistentes pidiendo atención. En otras ocasiones, puede que se muestren bastante independientes. Están acostumbrados a la vida al aire libre y muy bien adaptados al vagabundeo y a la caza; también se dice que son excelentes escaladores. Pueden ser compañeros muy gratificantes, por su naturaleza enormemente amistosa y juguetona. Es una raza de desarrollo lento y puede que no alcance la madurez hasta los cuatro años.',
-      lista: [{ pais: "Escandinavia", salud: 'El bosque de Noruega parece ser una raza robusta y no se tiene constancia de problemas hereditarios importantes. Nice', aseo:"El bosque de Noruega necesita bastantes cuidados. Si se le acostumbra al cepillo y al peine desde pequeñito, acabará disfrutando del aseo habitual como parte de la relación entre gato y humano." }]
+      lista: [{ pais: "Escandinavia", salud: 'El bosque de Noruega parece ser una raza robusta y no se tiene constancia de problemas hereditarios importantes. Nice', aseo:"El bosque de Noruega necesita bastantes cuidados. Si se le acostumbra al cepillo y al peine desde pequeñito, acabará disfrutando del aseo habitual como parte de la relación entre gato y humano." },]
     },
     {
       renderizar: true,

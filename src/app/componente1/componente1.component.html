@@ -11,9 +11,9 @@
       <div class="field">
         <label class="label">Filtrar</label>
         <div class="control">
-          <input class="input" type="Busqueda" placeholder="Escribe">
+          <input class="input" placeholder= "Escribe para filtrar" type="text" #ref />
+        <button  class="button is-info" (click)="applyFilter(ref.value)">Buscar</button>
         </div>
-        <button  class="button is-info">Buscar</button>
       </div>
       
       <table class= "table is-bordered is-hoverable" *ngFor = "let data of dataGato.lista">
