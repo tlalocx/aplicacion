@@ -1,20 +1,23 @@
 <div class="card">
   <button style="float: right" class="delete is-medium"  (click)="emitSomething()"></button>
   <form class="box">
-    <div class="field">
-      <label class="label">Filtrar</label>
-      <div class="control">
-        <input #busqueda class="input" type="Busqueda" placeholder="Escribe" >
-      </div>
-      <button class="button is-info" (click)="applyFilter(busqueda.value)">Buscar</button>
-    </div>
+   
 
     <img src="{{dataGato.img}}" alt="Avatar">
     <div class="container">
       <h4><b>{{dataGato.titulo}}</b></h4>
       <p>{{dataGato.descripcion}}</p>
       <b></b>
-      <table class= "table is-bordered is-hoverable" *ngFor = "let data of dataGato.lista">
+
+      <div class="field">
+        <label class="label">Filtrar</label>
+        <div class="control">
+          <input class="input" type="Busqueda" placeholder="Escribe">
+        </div>
+        <button  class="button is-info">Buscar</button>
+      </div>
+      
+      <table class= "table is-bordered is-hoverable" *ngFor = "let x of dataGato.lista">
         <th>Pais</th>
         <th>Aseo</th>
         <th>Salud</th>
