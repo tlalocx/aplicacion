@@ -48,6 +48,7 @@ export class AppComponent {
       return x;
     });
   }
+  
   mensaje = "";
   visualizarMensaje = false;
   something(valor: boolean, titulo: String){
