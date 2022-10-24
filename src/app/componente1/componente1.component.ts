@@ -21,4 +21,10 @@ export class Componente1Component implements OnInit {
     this.emmiter.emit(false);
   }
 
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+    this.dataGato.filter = filterValue;
+  }
+
 }
