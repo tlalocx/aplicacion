@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, OnDestroy} from '@angular/core';
 
 @Component({
   selector: 'app-componente1',
@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./componente1.component.css']
 })
 
-export class Componente1Component implements OnInit {
+export class Componente1Component implements OnInit, OnChanges, OnDestroy {
   @Input() 
    dataGato: any;
    
@@ -15,6 +15,14 @@ export class Componente1Component implements OnInit {
    constructor() { }
 
   ngOnInit(): void {
+    debugger;
+  }
+
+  ngOnChanges(): void {
+    debugger;
+  }
+  ngOnDestroy(): void {
+    debugger;
   }
   
   emitSomething() {
@@ -24,7 +32,7 @@ export class Componente1Component implements OnInit {
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
-    this.dataGato.filter = filterValue;
+    this.dataGato.lista.filter = filterValue;
   }
 
 }
