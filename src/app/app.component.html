@@ -27,7 +27,7 @@
 <div class="columns">
   <div *ngFor="let dataGato of dataGatos">
     <div class="column" *ngIf="dataGato.renderizar">
-      <app-componente1 (emmiter) = "something($event,dataGato.titulo)" [dataGato]="dataGato"></app-componente1>
+      <app-componente1 (emmiter) = "something($event,dataGato.titulo)" (busqueda)="filtro($event)" [dataGato]="dataGato"></app-componente1>
     </div>
   </div>
 </div>

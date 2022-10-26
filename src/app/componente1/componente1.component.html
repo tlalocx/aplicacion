@@ -20,20 +20,11 @@
       <th>Pais</th>
       <th>Aseo</th>
       <th>Salud</th>
-      <ng-container *ngIf="dataGato.filter === null; else elseBlock">
         <tr *ngFor="let data of dataGato.lista">
           <td>{{data.pais}}</td>
           <td>{{data.aseo}}</td>
           <td>{{data.salud}}</td>
         </tr>
-      </ng-container>
-      <ng-template #elseBlock>
-        <ng-container *ngFor="let data of dataGato.lista">
-          <tr>
-
-          </tr>
-        </ng-container>
-      </ng-template>
     </table>
 
   </div>

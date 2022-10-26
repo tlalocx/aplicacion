@@ -11,6 +11,7 @@ export class Componente1Component implements OnInit, OnChanges, OnDestroy {
    dataGato: any;
    
   @Output() emmiter = new EventEmitter<boolean>();  
+  @Output() busqueda = new EventEmitter<String>();
 
    constructor() { }
 
@@ -30,9 +31,7 @@ export class Componente1Component implements OnInit, OnChanges, OnDestroy {
   }
 
   applyFilter(filterValue: string) {
-    filterValue = filterValue.trim(); // Remove whitespace
-    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
-    this.dataGato.lista.filter = filterValue;
+    this.busqueda.emit(filterValue);
   }
 
 }
