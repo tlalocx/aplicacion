@@ -13,21 +13,26 @@
 
 <section class="section">
   <h1 class="title">Menu</h1>
-  <div class="buttons"> 
+  <div class="buttons">
     <div *ngFor="let dataGato of dataGatos">
-    <button class="button is-responsive is-rounded" (click) = "showData(dataGato.titulo)" >{{dataGato.titulo}} </button>
+      <button class="button is-responsive is-rounded" (click)="showData(dataGato.titulo)">{{dataGato.titulo}} </button>
     </div>
-  </div> 
+  </div>
 
-<div *ngIf = "visualizarMensaje">
-  <app-notificacion [mensaje] = "mensaje"></app-notificacion>
-</div>
+  <div *ngIf="visualizarMensaje">
+    <app-notificacion [mensaje]="mensaje"></app-notificacion>
+  </div>
+  <div *ngIf="visualizarMensaje2">
+    <app-notificacion [mensaje]="mensaje"></app-notificacion>
+  </div>
+
 
 </section>
-<div class="columns">
+<div class="columns mg-top:200px">
   <div *ngFor="let dataGato of dataGatos">
     <div class="column" *ngIf="dataGato.renderizar">
-      <app-componente1 (emmiter) = "something($event,dataGato.titulo)" (busqueda)="filtro($event)" [dataGato]="dataGato"></app-componente1>
+      <app-componente1 (emmiter)="notificacion($event,dataGato.titulo)" (busqueda)="notificacion2($event)" [dataGato]="dataGato">
+      </app-componente1>
     </div>
   </div>
 </div>

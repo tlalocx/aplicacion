@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'aplicacion';
 
-  lista = [ {}]
+  lista = [{}]
 
   dataGatos = [
     {
-      renderizar: true,
+      renderizar: false,
       img: 'assets/images/Bosque-de-noruega.png',
       titulo: 'Bosque de Noruega',
       descripcion:
@@ -30,10 +30,9 @@ export class AppComponent {
           aseo: 'Mucho'
         },
       ],
-      filter: null,
     },
     {
-      renderizar: true,
+      renderizar: false,
       img: 'assets/images/Fold.png',
       titulo: 'Fold Escoces',
       descripcion:
@@ -54,7 +53,7 @@ export class AppComponent {
       ],
     },
     {
-      renderizar: true,
+      renderizar: false,
       img: '/assets/images/Sphynx.png',
       titulo: 'Sphynx',
       descripcion:
@@ -88,11 +87,24 @@ export class AppComponent {
   }
 
   mensaje = '';
+  
   visualizarMensaje = false;
-  something(valor: boolean, titulo: String) {
+  notificacion(valor: boolean, titulo: String) {
     this.showData(titulo);
     this.mensaje = 'Se cerro la ventana de ' + titulo;
     this.visualizarMensaje = true;
+  }
+
+    
+  visualizarMensaje2 = false;
+  notificacion2(busqueda: String) {
+    this.showData(busqueda);
+    this.mensaje = 'Se esta buscando por ' + busqueda;
+    this.visualizarMensaje2 = true;
+  }
+
+  cerrarNotificacion(){
+    this.visualizarMensaje = false;
   }
 
   filtro(busqueda:any){
