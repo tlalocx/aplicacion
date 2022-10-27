@@ -15,6 +15,8 @@ import { forkJoin } from 'rxjs';
   styleUrls: ['./componente1.component.css'],
 })
 export class Componente1Component implements OnInit, OnChanges, OnDestroy {
+  private _property = "";
+  
   @Input()
   dataGato: any;
 
@@ -44,6 +46,7 @@ export class Componente1Component implements OnInit, OnChanges, OnDestroy {
     if (!filterValue) this.ngOnInit(); // Si no se da valores
     else {
       for (let object of this.dataGato.lista) {
+      
         if (object.pais.includes(filterValue)) {
           this.fDataGatoLista = [];
           this.fDataGatoLista.push({
@@ -57,7 +60,27 @@ export class Componente1Component implements OnInit, OnChanges, OnDestroy {
       this.busqueda.emit(filterValue);
     }
   }
-
+get property(){
+  return this._property;
+}
+set property(filterValue:String){
+  if (!filterValue) this.ngOnInit(); // Si no se da valores
+    else {
+      for (let object of this.dataGato.lista) {
+      
+        if (object.pais.includes(filterValue)) {
+          this.fDataGatoLista = [];
+          this.fDataGatoLista.push({
+            pais: object.pais,
+            salud: object.salud,
+            aseo: object.aseo,
+          });
+          break;
+        }
+      }
+      this.busqueda.emit(filterValue);
+    }
+}
 
 
 }
