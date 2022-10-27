@@ -40,7 +40,7 @@ export class Componente1Component implements OnInit, OnChanges, OnDestroy {
   }
 
   applyFilter(filterValue: string) {
-    // Remove whitespace
+    
     if (!filterValue) this.ngOnInit(); // Si no se da valores
     else {
       for (let object of this.dataGato.lista) {
@@ -57,4 +57,7 @@ export class Componente1Component implements OnInit, OnChanges, OnDestroy {
       this.busqueda.emit(filterValue);
     }
   }
+
+
+
 }
