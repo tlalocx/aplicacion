@@ -34,5 +34,43 @@ export class SeccionBosqueComponent implements OnInit {
         },
       ],
     }]
-
+    
+    element!: boolean;
+    showData(titulo: String) {
+      let array = this.dataBosque.map((x, y, z) => {
+        if (x.titulo === titulo) {
+          if (x.renderizar === false) {
+            x.renderizar = true;
+          } else {
+            x.renderizar = false;
+          }
+        }
+        return x;
+      });
+    }
+  
+    mensaje = '';
+    
+    visualizarMensaje = false;
+    notificacion(valor: boolean, titulo: String) {
+      this.showData(titulo);
+      this.mensaje = 'Se cerro la ventana de ' + titulo;
+      this.visualizarMensaje = true;
+    }
+  
+      
+    visualizarMensaje2 = false;
+    notificacion2(busqueda: String) {
+      this.showData(busqueda);
+      this.mensaje = 'Se esta buscando por ' + busqueda;
+      this.visualizarMensaje2 = true;
+    }
+  
+    cerrarNotificacion(){
+      this.visualizarMensaje = false;
+    }
+  
+    filtro(busqueda:any){
+     
+    }
 }
