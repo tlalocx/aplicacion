@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-seccion-bosque',
@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeccionBosqueComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  dataGato = [
+  dataBosque = [
     {
       renderizar: true,
       img: 'assets/images/Bosque-de-noruega.png',
