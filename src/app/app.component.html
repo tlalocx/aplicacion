@@ -14,18 +14,17 @@
     </p>
   </div>
 </section>
+
 <div class="div" >
   <nav class="level">
     <p class="level-item has-text-centered">
       <a routerLink="/seccionBosque" class="link is-info">Bosque de Noruega</a>
-      <router-outlet></router-outlet>
-      <app-seccion-bosque></app-seccion-bosque>
     </p>
     <p class="level-item has-text-centered">
-      <a class="link is-info">Fold Escoces</a>
+      <a  routerLink="/seccionFold" class="link is-info">Fold Escoces</a>
     </p>
     <p class="level-item has-text-centered">
-      <a class="link is-info">Sphynix</a>
+      <a  routerLink= "/seccionSphynx" class="link is-info">Sphynix</a>
     </p>
   </nav>
 </div>
@@ -38,5 +37,9 @@
     <app-notificacion [mensaje]="mensaje"></app-notificacion>
   </div>
 </section>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
 
 

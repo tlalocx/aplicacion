@@ -1,3 +1,30 @@
-<div *ngFor="let dataGato of dataGato">
-  <app-componente1></app-componente1>
-</div>
+<div class="card">
+
+
+  <img src="{{dataGato.img}}" alt="Avatar">
+  <div class="container">
+    <h4><b>{{dataGato.titulo}}</b></h4>
+    <p>{{dataGato.descripcion}}</p>
+
+
+    <div class="field">
+      <label class="label">Filtrar</label>
+      <div class="control">
+        <input [(ngModel)]= "property" #busqueda class="input" type="Busqueda" placeholder="Escribe" >
+      </div>
+      <button class="button is-info mt-30" (click)="applyFilter(busqueda.value)">Buscar</button>
+    </div>
+
+
+    <table class="table is-bordered is-hoverable">
+      <th>Pais</th>
+      <th>Aseo</th>
+      <th>Salud</th>
+      <tr *ngFor="let data of fDataGatoLista">
+        <td>{{data.pais}}</td>
+        <td>{{data.aseo}}</td>
+        <td>{{data.salud}}</td>
+      </tr>
+    </table>
+
+  </div>

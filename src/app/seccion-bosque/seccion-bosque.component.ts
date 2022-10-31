@@ -14,7 +14,7 @@ export class SeccionBosqueComponent implements OnInit {
 
   dataGato = [
     {
-      renderizar: false,
+      renderizar: true,
       img: 'assets/images/Bosque-de-noruega.png',
       titulo: 'Bosque de Noruega',
       descripcion:
