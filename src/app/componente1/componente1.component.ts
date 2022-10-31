@@ -6,6 +6,8 @@ import {
   EventEmitter,
   OnChanges,
   OnDestroy,
+  SimpleChange,
+  SimpleChanges,
 } from '@angular/core';
 import { forkJoin } from 'rxjs';
 
@@ -14,7 +16,9 @@ import { forkJoin } from 'rxjs';
   templateUrl: './componente1.component.html',
   styleUrls: ['./componente1.component.css'],
 })
+
 export class Componente1Component implements OnInit, OnChanges, OnDestroy {
+
   private _property = "";
   
   @Input()
@@ -22,6 +26,7 @@ export class Componente1Component implements OnInit, OnChanges, OnDestroy {
 
   @Output() emmiter = new EventEmitter<boolean>();
   @Output() busqueda = new EventEmitter<String>();
+
   fDataGatoLista: any;
 
   constructor() {}
@@ -30,8 +35,8 @@ export class Componente1Component implements OnInit, OnChanges, OnDestroy {
     this.fDataGatoLista = this.dataGato.lista;
   }
 
-  ngOnChanges(): void {
-    debugger;
+  ngOnChanges(changes : SimpleChanges){
+    console.log(this.dataGato);
   }
   ngOnDestroy(): void {
     debugger;
