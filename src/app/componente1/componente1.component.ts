@@ -1,37 +1,91 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, OnDestroy} from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  OnChanges,
+  OnDestroy,
+  SimpleChange,
+  SimpleChanges,
+} from '@angular/core';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-componente1',
   templateUrl: './componente1.component.html',
-  styleUrls: ['./componente1.component.css']
+  styleUrls: ['./componente1.component.css'],
 })
 
 export class Componente1Component implements OnInit, OnChanges, OnDestroy {
-  @Input() 
-   dataGato: any;
-   
-  @Output() emmiter = new EventEmitter<boolean>();  
+
+  private _property = "";
+  
+  @Input()
+  dataGato: any;
+
+  @Output() emmiter = new EventEmitter<boolean>();
   @Output() busqueda = new EventEmitter<String>();
 
-   constructor() { }
+  fDataGatoLista: any;
+
+  constructor() {}
 
   ngOnInit(): void {
-    debugger;
+    this.fDataGatoLista = this.dataGato.lista;
   }
 
-  ngOnChanges(): void {
-    debugger;
+  ngOnChanges(changes : SimpleChanges){
+    console.log(this.dataGato);
   }
   ngOnDestroy(): void {
     debugger;
   }
-  
+
   emitSomething() {
     this.emmiter.emit(false);
   }
 
   applyFilter(filterValue: string) {
-    this.busqueda.emit(filterValue);
+    
+    if (!filterValue) this.ngOnInit(); // Si no se da valores
+    else {
+      for (let object of this.dataGato.lista) {
+      
+        if (object.pais.includes(filterValue)) {
+          this.fDataGatoLista = [];
+          this.fDataGatoLista.push({
+            pais: object.pais,
+            salud: object.salud,
+            aseo: object.aseo,
+          });
+          break;
+        }
+      }
+      this.busqueda.emit(filterValue);
+    }
   }
+get property(){
+  return this._property;
+}
+set property(filterValue:String){
+  if (!filterValue) this.ngOnInit(); // Si no se da valores
+    else {
+      for (let object of this.dataGato.lista) {
+      
+        if (object.pais.includes(filterValue)) {
+          this.fDataGatoLista = [];
+          this.fDataGatoLista.push({
+            pais: object.pais,
+            salud: object.salud,
+            aseo: object.aseo,
+          });
+          break;
+        }
+      }
+      this.busqueda.emit(filterValue);
+    }
+}
+
 
 }

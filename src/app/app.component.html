@@ -1,3 +1,7 @@
+
+<head>
+  <link rel="stylesheet" href="app.component.css" />
+</head>
 <section class="hero is-info">
   <div class="hero-body">
     <p class="title">
@@ -11,23 +15,22 @@
   </div>
 </section>
 
-<section class="section">
-  <h1 class="title">Menu</h1>
-  <div class="buttons"> 
-    <div *ngFor="let dataGato of dataGatos">
-    <button class="button is-responsive is-rounded" (click) = "showData(dataGato.titulo)" >{{dataGato.titulo}} </button>
-    </div>
-  </div> 
-
-<div *ngIf = "visualizarMensaje">
-  <app-notificacion [mensaje] = "mensaje"></app-notificacion>
+<div class="div" >
+  <nav class="level">
+    <p class="level-item has-text-centered">
+      <a routerLink="/bosque" class="link is-info">Bosque de Noruega</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a  routerLink="fold" class="link is-info">Fold Escoces</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a  routerLink= "/sphynx" class="link is-info">Sphynix</a>
+    </p>
+  </nav>
 </div>
 
-</section>
-<div class="columns">
-  <div *ngFor="let dataGato of dataGatos">
-    <div class="column" *ngIf="dataGato.renderizar">
-      <app-componente1 (emmiter) = "something($event,dataGato.titulo)" (busqueda)="filtro($event)" [dataGato]="dataGato"></app-componente1>
-    </div>
-  </div>
+<div>
+  <router-outlet></router-outlet>
 </div>
+
+

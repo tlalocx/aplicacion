@@ -15,4 +15,8 @@ export class NotificacionComponent implements OnInit {
   }
   @Input()
   mensaje = "";
+
+  cerrarMensaje(){
+    //vizualizarMensaje = false;
+  }
 }
