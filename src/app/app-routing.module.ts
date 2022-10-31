@@ -5,9 +5,9 @@ import { SeccionFoldComponent } from './seccion-fold/seccion-fold.component';
 import { SeccionSphynxComponent } from './seccion-sphynx/seccion-sphynx.component';
 
 const routes: Routes = [
-  { path: 'seccionBosque', component: SeccionBosqueComponent },
-  { path: 'seccionFold', component: SeccionFoldComponent }, 
-  { path: 'seccionSphynx', component: SeccionSphynxComponent }
+  { path: 'bosque', component: SeccionBosqueComponent },
+  { path: 'fold', component: SeccionFoldComponent }, 
+  { path: 'sphynx', component: SeccionSphynxComponent }
 ];
 
 @NgModule({

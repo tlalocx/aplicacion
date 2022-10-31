@@ -13,7 +13,7 @@ export class SeccionBosqueComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  dataBosque = [
+  data = [
     {
       renderizar: true,
       img: 'assets/images/Bosque-de-noruega.png',
@@ -31,13 +31,14 @@ export class SeccionBosqueComponent implements OnInit {
           pais: 'Canada',
           salud: 'Buena',
           aseo: 'Mucho'
-        },
-      ],
-    }]
+        }
+      ]
+    }
+  ];
     
     element!: boolean;
     showData(titulo: String) {
-      let array = this.dataBosque.map((x, y, z) => {
+      let array = this.data.map((x, y, z) => {
         if (x.titulo === titulo) {
           if (x.renderizar === false) {
             x.renderizar = true;

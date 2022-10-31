@@ -29,8 +29,8 @@ export class SeccionSphynxComponent implements OnInit {
         salud:
           'Estos gatos pueden sufrir una dolorosa enfermedad articular degenerativa durante toda su vida. Esta enfermedad se debe a que la mutación del fold escocés afecta negativamente al cartílago; se ve sobre todo en cómo se pliega el cartílago de la oreja hacia delante. A medida que la enfermedad avanza, las articulaciones se endurecen, los huesos se fusionan y el movimiento se vuelve más difícil y doloroso. El gato pasa de una ligera cojera a mostrarse reacio a moverse.',
         aseo: 'El pelaje denso y corto del fold escocés es fácil de cuidar, no necesita ningún tratamiento especial, pero sí un cepillado para retirarle el pelo muerto. Al fold escocés le cuesta limpiarse las orejas, por lo que su dueño debe retirarle la cera o suciedad depositadas en el oído externo para evitar infecciones.',
-    }],
-    },
+    }]
+    }
   ];
 
   element!: boolean;
