@@ -29,15 +29,6 @@
   </nav>
 </div>
 
-<section>
-  <div *ngIf="visualizarMensaje">
-    <app-notificacion [mensaje]="mensaje"></app-notificacion>
-  </div>
-  <div *ngIf="visualizarMensaje2">
-    <app-notificacion [mensaje]="mensaje"></app-notificacion>
-  </div>
-</section>
-
 <div>
   <router-outlet></router-outlet>
 </div>
